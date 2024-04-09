@@ -1,0 +1,8 @@
+{
+    "ext_name": {
+        "message": "chrome extension"
+    },
+    "ext_description": {
+        "message": "A chrome extension initialization template based on vite3 vue3 unocss"
+    }
+}

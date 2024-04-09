@@ -1,0 +1,8 @@
+{
+    "ext_name": {
+        "message": "单词收藏"
+    },
+    "ext_description": {
+        "message": "一个基于 vite3 vue3 unocss 的单词收藏初始化模板"
+    }
+}

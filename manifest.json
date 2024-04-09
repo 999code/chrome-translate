@@ -1,0 +1,51 @@
+{
+    "manifest_version": 3,
+    "name": "__MSG_ext_name__",
+    "version": "1.0.0",
+    "description": "__MSG_ext_description__",
+    "author": "NMTuan",
+    "homepage_url": "https://github.com/NMTuan/base_vite_chrome_extension",
+    "default_locale": "zh_CN",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "permissions": [
+        "contextMenus",
+        "notifications",
+        "webRequest",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://openapi.youdao.com/",
+        "*://*.youdao.com/*",
+        "http://*/",
+        "https://*/"
+    ],
+    "background": {
+        "service_worker": "src/background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "/src/content/content.js",
+                "/src/content/webcomponents-bundle.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "pages/test.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
